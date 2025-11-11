@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onit Watch - Đồng hồ cao cấp</title>
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="../img//logo/logoStore.png" alt="Onit Watch" />
+        <h1>ONIT WATCH</h1>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Tìm kiếm đồng hồ..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="user-cart">
+        <a href="../html/login.html"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+   
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+
+    <nav>
+      <ul>
+        <li><a href="../html/home.html">Trang chủ</a></li>
+        <li class="dropdown">
+          <a href="#">Sản phẩm <i class="fas fa-angle-down"></i></a>
+          <ul class="submenu">
+            <li><a href="#">Đồng hồ nam</a></li>
+            <li><a href="#">Đồng hồ nữ</a></li>
+            <li><a href="#">Đồng hồ cặp đôi</a></li>
+          </ul>
+        </li>
+        <li><a href="../html/new.html">Tin tức</a></li>
+        <li><a href="../html/contact.html">Liên hệ</a></li>
+         <li><a href="../html/labthweb.html">Lab Thực Hành</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">LIÊN HỆ</h2>
+    <form class="contact-form" action="#" method="post">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Tên:</label>
+          <input type="text" id="name" name="name" placeholder="Tên của bạn" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Số điện thoại:</label>
+          <input type="text" id="phone" name="phone" placeholder="+84" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Tiêu đề:</label>
+          <input type="text" id="subject" name="subject" placeholder="Tiêu đề">
+        </div>
+      </div>
+      <div class="form-group full-width">
+        <label for="message">Lời nhắn:</label>
+        <textarea id="message" name="message" rows="6" placeholder="Nhập lời nhắn của bạn..." required></textarea>
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn-submit">Gửi lời nhắn</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-info">
+      <div class="info">
+        <h3>ONIT WATCH</h3>
+        <p>Website bán đồng hồ cao cấp</p>
+        <p><strong>Địa chỉ:</strong> 180 Cao Lỗ, Quận 8, TP.HCM</p>
+        <p><strong>Email:</strong> contact@onitwatch.vn</p>
+        <p><strong>Điện thoại:</strong> (028) 123 456 789</p>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9544102884747!2d106.67783209999999!3d10.737997199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1746779135460!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="credit">© 2025 Onit Watch. Designed by Thân Hoàng Khiêm | MSSV: DH52200893 | Lớp: D22_TH04 | Nhóm 9 Thứ 3 Ca 3</div>
+  </footer>
+  <script src="../JS/main.js"></script>
+
+</body>
+</html>
+
+

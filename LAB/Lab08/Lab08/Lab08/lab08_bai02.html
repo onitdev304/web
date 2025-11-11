@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider Tự Động</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .slider {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 500%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 800px;
+      height: 400px;
+      object-fit: cover;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .nav button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #717171;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides">
+    <img src="img/slide_1.jpg" alt="Ảnh 1">
+    <img src="img/slide_2.jpg" alt="Ảnh 2">
+    <img src="img/slide_3.jpg" alt="Ảnh 3">
+    <img src="img/slide_4.jpg" alt="Ảnh 4">
+    <img src="img/slide_5.jpg" alt="Ảnh 5">
+  </div>
+  <div class="nav">
+    <button onclick="prevSlide()">&#10094;</button>
+    <button onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<div class="dots">
+  <span class="dot" onclick="goToSlide(0)"></span>
+  <span class="dot" onclick="goToSlide(1)"></span>
+  <span class="dot" onclick="goToSlide(2)"></span>
+  <span class="dot" onclick="goToSlide(3)"></span>
+  <span class="dot" onclick="goToSlide(4)"></span>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelector('.slides');
+  const dots = document.querySelectorAll('.dot');
+
+  function updateSlider() {
+    slides.style.transform = `translateX(-${currentIndex * 800}px)`;
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % 5;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + 5) % 5;
+    updateSlider();
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateSlider();
+  }
+
+  // Khởi tạo slider ban đầu
+  updateSlider();
+
+  // Tự động chuyển slide mỗi 2 giây
+  setInterval(nextSlide, 2000);
+</script>
+
+</body>
+</html>

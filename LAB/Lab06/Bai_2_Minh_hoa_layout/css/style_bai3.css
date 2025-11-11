@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .wrapper > * {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Vị trí mặc định */
+  .header {
+    background: tomato;
+    width: 100%;
+    order: 0;
+  }
+  
+  .footer {
+    background: lightgreen;
+    width: 100%;
+    order: 4;
+  }
+  
+  .main {
+    background: deepskyblue;
+    text-align: left;
+    order: 2;
+  }
+  
+  .main img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .aside {
+    order: 1;
+  }
+  
+  .aside-1 {
+    background: gold;
+  }
+  
+  .aside-2 {
+    background: hotpink;
+    order: 3;
+  }
+  
+  /* Tablet layout (>= 600px): 3 cột */
+  @media (min-width: 600px) {
+    .aside-1,
+    .aside-2 {
+      width: 20%;
+    }
+  
+    .main {
+      width: 60%;
+    }
+  
+    .aside,
+    .main {
+      flex: none;
+    }
+  
+    body {
+      font-size: 16px;
+    }
+  
+    .aside-2 {
+      display: block;
+    }
+  }
+  
+  /* Mobile layout (< 600px): 1 cột */
+  @media (max-width: 599px) {
+    body {
+      font-size: 20px;
+    }
+  
+    .wrapper > * {
+      width: 100%;
+    }
+  
+    .aside-2 {
+      display: none;
+    }
+  
+    .main {
+      order: 1;
+    }
+  
+    .aside-1 {
+      order: 2;
+    }
+  
+    .footer {
+      order: 3;
+    }
+  }
+  

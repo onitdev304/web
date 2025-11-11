@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05 Menu</title>
+    <style>
+        .menu{
+            list-style-type: none;
+            display: flex;
+            padding:0;
+        
+        }
+        .menu li{
+            background-color: aquamarine;
+            padding:10px 20px;
+        }
+        .menu li a{
+            text-decoration: none;
+            color:blue;
+        }
+        .menu li:hover{
+            background-color: yellow;
+            border-radius: 5px;
+        }
+        .menu li:hover a{
+            color:white;
+            font-weight: bold;
+        }
+        .vertical-menu{
+            list-style-type: none;
+            margin:20px 0;
+            padding:0;
+            width:200px;
+        }
+        .vertical-menu li{
+            background-color: #308fc7;
+
+        }
+        .vertical-menu li a{
+            display:block;
+            color:#333;
+            padding:8px 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid white;
+        }
+        .vertical-menu li:hover{
+            filter: brightness(130%);
+            color: white;
+            font-style: italic;
+
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="">Trang chủ</a></li>
+        <li><a href="">Giới thiệu</a></li>
+        <li><a href="">Sản phẩm</a></li>
+        <li><a href="">Dịch vụ</a></li>
+        <li><a href="">Liên hệ</a></li>
+    </ul>
+    <ul class="vertical-menu">
+        <li><a href=""><strong>Trang chủ</strong></a></li>
+        <li><a href=""><strong>Giới thiệu</strong></a></li>
+        <li><a href=""><strong>Sản phẩm</strong></a></li>
+        <li><a href=""><strong>Dịch vụ</strong></a></li>
+        <li><a href=""><strong>Liên hệ</strong></a></li>
+    </ul>
+</body>
+</html>

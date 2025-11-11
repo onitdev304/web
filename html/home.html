@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onit Watch - Đồng hồ cao cấp</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="../img//logo/logoStore.png" alt="Onit Watch">
+        <h1>ONIT WATCH</h1>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Tìm kiếm đồng hồ...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="user-cart">
+        <a href="../html/login.html"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </div>
+    </div>
+
+   <!-- Nút ☰ -->
+    
+
+    <nav>
+      <ul>
+        <li><a href="../html/home.html">Trang chủ</a></li>
+        <li class="dropdown">
+          <a href="#">Sản phẩm <i class="fas fa-angle-down"></i></a>
+          <ul class="submenu">
+            <li><a href="#">Đồng hồ nam</a></li>
+            <li><a href="#">Đồng hồ nữ</a></li>
+            <li><a href="#">Đồng hồ cặp đôi</a></li>
+          </ul>
+        </li>
+        <li><a href="../html/new.html">Tin tức</a></li>
+        <li><a href="../html/contact.html">Liên hệ</a></li>
+         <li><a href="../html/labthweb.html">Lab Thực Hành</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Slider -->
+  <section class="slider">
+  <div class="slides">
+  <img class="slide" src="../img/banner/slide1.jpg" alt="Slide 1">
+  <img class="slide" src="../img/banner/slide2.jpg" alt="Slide 2">
+  <img class="slide" src="../img/banner/slide3.jpg" alt="Slide 3">
+</div>
+
+    <div class="controls">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Sản phẩm nổi bật -->
+<!-- Giới thiệu ngắn -->
+<section class="intro">
+  <div class="container">
+    <h2>Onit Watch - Thương hiệu đồng hồ cao cấp</h2>
+    <p>Chúng tôi tự hào mang đến những mẫu đồng hồ chính hãng, tinh tế, phù hợp với mọi phong cách và thời đại. Khám phá bộ sưu tập mới nhất và trải nghiệm dịch vụ chăm sóc khách hàng đẳng cấp.</p>
+  </div>
+</section>
+
+<!-- Thương hiệu nổi bật -->
+<section class="brands">
+  <h3>Thương Hiệu Nổi Bật</h3>
+  <div class="brand-logos">
+    <img src="../img/brand/brand_rolex.png" alt="Rolex" />
+    <img src="../img/brand/brand_omega.png" alt="Omega" />
+    <img src="../img/brand/brand_seiko.png" alt="Seiko" />
+    <img src="../img/brand/brand_cartier.png" alt="Cartier" />
+    <img src="../img/brand/brand_tagheuer.png" alt="Tag Heuer" />
+    <img src="../img/brand/brand_citizen.png" alt="Citizen" />
+  </div>
+</section>
+
+<!-- Phong cảnh -->
+<section class="scenery">
+  <img src="../img/banner/scenery1.jpg" alt="Phong cảnh đẹp" />
+</section>
+
+<!-- Sản phẩm nổi bật 8 sản phẩm 4 cột 2 dòng -->
+<section class="featured">
+  <h2>Sản phẩm nổi bật</h2>
+  <div class="products grid-4x2">
+    <div class="product">
+      <img src="../img/product/watch1.png" alt="Rolex Classic" />
+      <h3>Rolex Classic</h3>
+      <p>50.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch2.png" alt="Omega Seamaster" />
+      <h3>Omega Seamaster</h3>
+      <p>35.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch3.jpg" alt="Seiko Presage" />
+      <h3>Seiko Presage</h3>
+      <p>15.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch4.jpg" alt="Cartier Tank" />
+      <h3>Cartier Tank</h3>
+      <p>70.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch5.jpg" alt="Tag Heuer Carrera" />
+      <h3>Tag Heuer Carrera</h3>
+      <p>40.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch6.jpg" alt="Citizen Eco-Drive" />
+      <h3>Citizen Eco-Drive</h3>
+      <p>20.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch7.jpg" alt="Tissot PRX" />
+      <h3>Tissot PRX</h3>
+      <p>18.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+    <div class="product">
+      <img src="../img/product/watch8.jpg" alt="Casio G-Shock" />
+      <h3>Casio G-Shock</h3>
+      <p>7.000.000₫</p>
+      <button>Thêm vào giỏ</button>
+    </div>
+  </div>
+</section>
+
+<!-- Ưu điểm nổi bật -->
+<section class="features">
+  <h2>Ưu điểm khi mua hàng tại Onit Watch</h2>
+  <div class="feature-items">
+    <div class="feature-item">
+      <i class="fas fa-shield-alt fa-3x"></i>
+      <h3>Chính hãng 100%</h3>
+      <p>Cam kết đồng hồ chính hãng từ các thương hiệu uy tín trên toàn thế giới.</p>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-truck fa-3x"></i>
+      <h3>Giao hàng nhanh chóng</h3>
+      <p>Vận chuyển toàn quốc, giao hàng nhanh trong 24-48h.</p>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-headset fa-3x"></i>
+      <h3>Hỗ trợ 24/7</h3>
+      <p>Đội ngũ tư vấn chuyên nghiệp luôn sẵn sàng hỗ trợ bạn mọi lúc.</p>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-sync-alt fa-3x"></i>
+      <h3>Đổi trả linh hoạt</h3>
+      <p>Chính sách đổi trả trong 7 ngày nếu sản phẩm không đúng yêu cầu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tin tức nổi bật -->
+<section class="news">
+  <h2>Tin tức nổi bật</h2>
+  <div class="news-items">
+    <article>
+      <img src="news1.jpg" alt="Tin tức 1" />
+      <h4>Cách chọn đồng hồ phù hợp với phong cách</h4>
+      <p>Khám phá những bí quyết chọn đồng hồ phù hợp giúp bạn tự tin hơn mỗi ngày.</p>
+      <a href="#">Xem thêm</a>
+    </article>
+    <article>
+      <img src="news2.jpg" alt="Tin tức 2" />
+      <h4>Top 5 mẫu đồng hồ dành cho nam giới</h4>
+      <p>Những mẫu đồng hồ sang trọng dành cho phái mạnh không thể bỏ qua.</p>
+      <a href="#">Xem thêm</a>
+    </article>
+    <article>
+      <img src="news3.jpg" alt="Tin tức 3" />
+      <h4>Xu hướng đồng hồ 2025</h4>
+      <p>Những xu hướng thiết kế đồng hồ hot nhất trong năm 2025.</p>
+      <a href="#">Xem thêm</a>
+    </article>
+  </div>
+</section>
+
+
+  <!-- Đăng ký nhận bản tin -->
+  <section class="newsletter">
+    <h3>Đăng Ký Nhận Bản Tin</h3>
+    <p>Để nhận thông tin mới nhất từ Onit Watch</p>
+    <form>
+      <input type="email" placeholder="Nhập địa chỉ email của bạn">
+      <button>Đăng Ký</button>
+    </form>
+  </section>
+
+  <!-- Bản đồ + footer -->
+  <footer>
+    <div class="footer-info">
+      <div class="info">
+        <h3>ONIT WATCH</h3>
+        <p>Website bán đồng hồ cao cấp</p>
+        <p><strong>Địa chỉ:</strong> 180 Cao Lỗ, Quận 8, TP.HCM</p>
+        <p><strong>Email:</strong> contact@onitwatch.vn</p>
+        <p><strong>Điện thoại:</strong> (028) 123 456 789</p>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9544102884747!2d106.67783209999999!3d10.737997199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1746779135460!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="credit">© 2025 Onit Watch. Designed by Thân Hoàng Khiêm | MSSV: DH52200893 | Lớp: D22_TH04 | Nhóm 9 Thứ 3 Ca 3</div>
+  </footer>
+
+<script src="../JS/main.js"></script>
+</body>
+</html>
+
+</html>

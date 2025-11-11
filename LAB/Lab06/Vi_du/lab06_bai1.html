@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #66b2ff;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .title {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      display: none; /* Ẩn trên màn lớn */
+    }
+
+    .menu {
+      display: flex;
+      background-color: #333;
+      justify-content: center;
+    }
+
+    .menu a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu a:hover {
+      background-color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="title">Home</div>
+    <div class="menu-toggle">&#9776;</div>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
