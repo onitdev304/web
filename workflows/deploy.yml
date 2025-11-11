@@ -1,0 +1,31 @@
+name: Deploy to Somee via FTP
+
+on:
+  push:
+    branches: [ "main" ]   # Mỗi lần push vào main sẽ deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # (Nếu project chỉ là HTML/CSS/JS thuần thì bỏ qua build.
+      #  Nếu có build, thêm step build trước khi deploy, ví dụ npm run build rồi deploy thư mục dist)
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          protocol: ftp
+          # Upload toàn bộ repo trừ những thứ dưới đây
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/*.md
