@@ -1,0 +1,34 @@
+name: Deploy to Somee via FTP
+
+on:
+  push:
+    branches: ["main"]   # deploy khi push vào nhánh main
+  workflow_dispatch:      # cho phép chạy tay từ tab Actions
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # Nếu bạn build (React/Vite/Next.js), thêm bước build ở đây rồi deploy thư mục build/dist
+      # - name: Setup Node
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: "20"
+      # - run: npm ci
+      # - run: npm run build
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Nếu deploy mã nguồn tĩnh ở gốc repo:
+          local-dir: .
+          # Nếu bạn có thư mục build: local-dir: dist
+          server-dir: /www.THLTWeb.somee.com/
+          # Tuỳ chọn: xoá file thừa trên host để đồng bộ sạch
+          dangerous-clean-slate: true
